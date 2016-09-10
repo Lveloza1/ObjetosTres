@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import clases.Complejo;
+
 /**
  *
  * @author USUARIO
@@ -27,21 +29,168 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtImaginario1 = new javax.swing.JTextField();
+        txtReal2 = new javax.swing.JTextField();
+        txtImaginario2 = new javax.swing.JTextField();
+        txtReal1 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        cmbOperacion = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        txtImaginario3 = new javax.swing.JTextField();
+        txtReal3 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        jLabel1.setText("Ejercicio 3");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, -1, -1));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Operación"));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setText("Real 1");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+
+        jLabel3.setText("Imaginario 1");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        jLabel4.setText("Real 2");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+
+        jLabel5.setText("Imaginario 2");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+        jPanel2.add(txtImaginario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 80, 30));
+        jPanel2.add(txtReal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 80, 30));
+        jPanel2.add(txtImaginario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 80, 30));
+        jPanel2.add(txtReal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 80, 30));
+
+        jLabel6.setFont(new java.awt.Font("Simplified Arabic Fixed", 1, 14)); // NOI18N
+        jLabel6.setText("i");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 20, -1));
+
+        cmbOperacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Suma", "Resta", "Multiplicación", "División", " " }));
+        jPanel2.add(cmbOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 90, 30));
+
+        jLabel9.setFont(new java.awt.Font("Simplified Arabic Fixed", 1, 14)); // NOI18N
+        jLabel9.setText("i");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 20, 20));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 280, 180));
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultado"));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtImaginario3.setEditable(false);
+        jPanel3.add(txtImaginario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 70, 30));
+
+        txtReal3.setEditable(false);
+        jPanel3.add(txtReal3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
+
+        jLabel8.setText("+");
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 20, 20));
+
+        jLabel7.setFont(new java.awt.Font("Simplified Arabic Fixed", 1, 14)); // NOI18N
+        jLabel7.setText("i");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 20, 20));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 260, 100));
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setText("Calcular");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 100, 40));
+
+        jButton1.setText("Limpiar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 100, 40));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 120, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+int op, r1, r2, i1, i2;
+            Complejo c1, c2, c3 = null;
+            op = cmbOperacion.getSelectedIndex();
+            r1 = Integer.parseInt(txtReal1.getText());
+            r2 = Integer.parseInt(txtReal2.getText());
+            i1 = Integer.parseInt(txtImaginario1.getText());
+            i2 = Integer.parseInt(txtImaginario2.getText());
+            
+            c1 = new Complejo(r1, i1);
+            c2 = new Complejo(r2, i2);
+            
+            switch (op) {
+                    case 0:
+                        c3 = c1.sumar(c2);
+
+                        break;
+                    case 1:
+                        c3 = c1.restar(c2);
+
+                        break;
+                    case 2:
+                        c3 = c1.multiplicar(c2);
+
+                        break;
+                    case 3:
+                        c3 = c1.multiplicar(c2);
+                        break;
+
+                }
+                txtReal3.setText("" + c3.getReal());
+                txtImaginario3.setText("" + c3.getImaginario());
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +228,27 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cmbOperacion;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JTextField txtImaginario1;
+    private javax.swing.JTextField txtImaginario2;
+    private javax.swing.JTextField txtImaginario3;
+    private javax.swing.JTextField txtReal1;
+    private javax.swing.JTextField txtReal2;
+    private javax.swing.JTextField txtReal3;
     // End of variables declaration//GEN-END:variables
 }
