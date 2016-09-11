@@ -19,6 +19,10 @@ public class Complejo {
         this.imaginario = imaginario;
     }
 
+    Complejo(int nr, int ni, int dr, int di) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getReal() {
         return real;
     }
@@ -34,8 +38,8 @@ public class Complejo {
     public void setImaginario(int imaginario) {
         this.imaginario = imaginario;
     }
-    
-     public Complejo sumar(Complejo c2) {
+
+    public Complejo sumar(Complejo c2) {
         Complejo c;
         int re, im;
 
@@ -45,6 +49,7 @@ public class Complejo {
         c = new Complejo(re, im);
         return c;
     }
+
     public Complejo restar(Complejo c2) {
         Complejo c;
         int re, im;
@@ -56,16 +61,38 @@ public class Complejo {
         return c;
 
     }
-      public Complejo multiplicar(Complejo c2 ) {
+
+    public Complejo multiplicar(Complejo c2) {
         Complejo c;
         int re, im;
 
-        re = (this.real * c2.real) - (this.imaginario*c2.imaginario);
-        im = (this.imaginario * c2.real) + (this.real*c2.imaginario);
+        re = (this.real * c2.real) - (this.imaginario * c2.imaginario);
+        im = (this.imaginario * c2.real) + (this.real * c2.imaginario);
 
         c = new Complejo(re, im);
         return c;
 
+    }
+
+    public Complejo numeradordividir(Complejo c2) {
+        Complejo c;
+        int nr, ni;
+
+        nr = (this.real * c2.real) + (this.imaginario * c2.imaginario);
+        ni = (this.imaginario * c2.real) - (this.real * c2.imaginario);
+        c = new Complejo(nr, ni);
+        return c;
+    }
+
+    public Complejo denominadordividir(Complejo c2) {
+        Complejo c;
+        int dr, di;
+
+        dr = (c2.real * c2.real)+(c2.imaginario*c2.imaginario);
+        di= (c2.real * c2.real)+(c2.imaginario*c2.imaginario);
+       c = new Complejo(dr, di);
+
+        return c;
     }
 
 }
