@@ -57,13 +57,17 @@ public class principal extends javax.swing.JFrame {
         cmdBorrar = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         txtNumImaginario = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
+        jLabelSignoReal = new javax.swing.JLabel();
         txtNumReal = new javax.swing.JTextField();
         txtDenImaginario = new javax.swing.JTextField();
         txtDenReal = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+        jLabelSignoImg = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -120,7 +124,7 @@ public class principal extends javax.swing.JFrame {
         jLabel6.setText("i");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 20, -1));
 
-        cmbOperacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Suma", "Resta", "Multiplicación", "División", " " }));
+        cmbOperacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Suma", "Resta", "Multiplicación", "División" }));
         jPanel2.add(cmbOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 90, 30));
 
         jLabel9.setFont(new java.awt.Font("Simplified Arabic Fixed", 1, 14)); // NOI18N
@@ -138,7 +142,7 @@ public class principal extends javax.swing.JFrame {
         txtReal3.setEditable(false);
         jPanel3.add(txtReal3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
 
-        jLabel8.setText("+");
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 20, 20));
 
         jLabel7.setFont(new java.awt.Font("Simplified Arabic Fixed", 1, 14)); // NOI18N
@@ -153,7 +157,7 @@ public class principal extends javax.swing.JFrame {
         jLabel11.setText("(");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 20, 30));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 240, 100));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 240, 100));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -164,7 +168,7 @@ public class principal extends javax.swing.JFrame {
                 cmdCalcularActionPerformed(evt);
             }
         });
-        jPanel4.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 100, 40));
+        jPanel4.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
 
         cmdBorrar.setText("Limpiar");
         cmdBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +176,7 @@ public class principal extends javax.swing.JFrame {
                 cmdBorrarActionPerformed(evt);
             }
         });
-        jPanel4.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 100, 40));
+        jPanel4.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 100, 40));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 150, 160));
 
@@ -182,25 +186,41 @@ public class principal extends javax.swing.JFrame {
         txtNumImaginario.setEditable(false);
         jPanel5.add(txtNumImaginario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 40, 30));
 
-        jLabel13.setText("+");
-        jPanel5.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 20, 20));
+        jLabelSignoReal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel5.add(jLabelSignoReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 20, 20));
 
         txtNumReal.setEditable(false);
-        jPanel5.add(txtNumReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 40, 30));
+        jPanel5.add(txtNumReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 40, 30));
 
         txtDenImaginario.setEditable(false);
         jPanel5.add(txtDenImaginario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 40, 30));
 
         txtDenReal.setEditable(false);
-        jPanel5.add(txtDenReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 40, 30));
+        jPanel5.add(txtDenReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 40, 30));
 
         jLabel14.setFont(new java.awt.Font("Simplified Arabic Fixed", 1, 14)); // NOI18N
         jLabel14.setText("i");
         jPanel5.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 20, 20));
-        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 40, 10));
+        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 40, 10));
         jPanel5.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 40, 10));
 
+        jLabelSignoImg.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel5.add(jLabelSignoImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 20, 20));
+
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 150, 140));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel12.setText("\" para distinguir la suma de la resta");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, 20));
+
+        jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel15.setText("-");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 20, 20));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel16.setText("Use \"");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -234,6 +254,10 @@ public class principal extends javax.swing.JFrame {
         txtNumImaginario.setText("");
         txtDenReal.setText("");
         txtDenImaginario.setText("");
+        jLabel8.setText("");
+        jLabelSignoImg.setText("");
+        jLabelSignoReal.setText("");
+
         txtReal1.requestFocusInWindow();
         cmbOperacion.setSelectedIndex(0);
 
@@ -258,51 +282,102 @@ public class principal extends javax.swing.JFrame {
             txtImaginario2.requestFocusInWindow();
             txtImaginario2.selectAll();
         } else {
-            int op, r1, r2, i1, i2;
+            int op, r1, r2, i1, i2, i3, ni, di, nr, dr, aux, aux1;
             Complejo c1, c2, c3 = null, c4 = null;
-            op = cmbOperacion.getSelectedIndex();
-            r1 = Integer.parseInt(txtReal1.getText());
-            r2 = Integer.parseInt(txtReal2.getText());
-            i1 = Integer.parseInt(txtImaginario1.getText());
-            i2 = Integer.parseInt(txtImaginario2.getText());
+            try {
 
-            c1 = new Complejo(r1, i1);
-            c2 = new Complejo(r2, i2);
+                op = cmbOperacion.getSelectedIndex();
+                r1 = Integer.parseInt(txtReal1.getText());
+                r2 = Integer.parseInt(txtReal2.getText());
+                i1 = Integer.parseInt(txtImaginario1.getText());
+                i2 = Integer.parseInt(txtImaginario2.getText());
 
-            switch (op) {
-                case 0:
-                    c3 = c1.sumar(c2);
+                c1 = new Complejo(r1, i1);
+                c2 = new Complejo(r2, i2);
 
-                    break;
-                case 1:
-                    c3 = c1.restar(c2);
+                switch (op) {
+                    case 0:
+                        c3 = c1.sumar(c2);
 
-                    break;
-                case 2:
-                    c3 = c1.multiplicar(c2);
+                        break;
+                    case 1:
+                        c3 = c1.restar(c2);
 
-                    break;
-                case 3:
-                    c3 = c1.denominadordividir(c2);
-                    c4 = c1.numeradordividir(c2);
+                        break;
+                    case 2:
+                        c3 = c1.multiplicar(c2);
 
-                    break;
+                        break;
+                    case 3:
+                        c3 = c1.denominadordividir(c2);
+                        c4 = c1.numeradordividir(c2);
 
-            }
-            if (op == 3) {
-                txtReal3.setText("");
-                txtImaginario3.setText("");
-                txtNumReal.setText("" + c4.getReal());
-                txtNumImaginario.setText("" + c4.getImaginario());
-                txtNumReal.setText("" + c4.getReal());
-                txtNumImaginario.setText("" + c4.getImaginario());
-                txtDenReal.setText("" + c3.getReal());
-                txtDenImaginario.setText("" + c3.getImaginario());
+                        break;
 
-            } else {
-                txtReal3.setText("" + c3.getReal());
-                txtImaginario3.setText("" + c3.getImaginario());
-                
+                }
+                if (op == 3) {
+                    txtReal3.setText("");
+                    txtImaginario3.setText("");
+                    txtNumReal.setText("" + c4.getReal());
+                    txtNumImaginario.setText("" + c4.getImaginario());
+                    txtNumReal.setText("" + c4.getReal());
+                    txtNumImaginario.setText("" + c4.getImaginario());
+                    txtDenReal.setText("" + c3.getReal());
+                    txtDenImaginario.setText("" + c3.getImaginario());
+                    ni = Integer.parseInt(txtNumImaginario.getText());
+                    di = Integer.parseInt(txtDenImaginario.getText());
+                    nr = Integer.parseInt(txtNumReal.getText());
+                    dr = Integer.parseInt(txtDenReal.getText());
+
+                    if (nr < 0 && dr < 0) {
+                        aux = nr * (-1);
+                        aux1 = dr * (-1);
+                        jLabelSignoReal.setText("");
+                        txtNumReal.setText("" + aux);
+                        txtDenReal.setText("" + aux1);
+                    } else if (nr > 0 && dr > 0) {
+                        jLabelSignoReal.setText("");
+                    } else if (nr < 0 && dr > 0) {
+                        aux = nr * (-1);
+                        txtNumReal.setText("" + aux);
+                        jLabelSignoReal.setText("-");
+                    } else if (nr > 0 && dr < 0) {
+                        aux1 = dr * (-1);
+                        txtDenReal.setText("" + aux1);
+                        jLabelSignoReal.setText("-");
+                    }
+                    if (ni < 0 && di < 0) {
+                        aux = ni * (-1);
+                        aux1 = di * (-1);
+                        jLabelSignoImg.setText("+");
+                        txtNumImaginario.setText("" + aux);
+                        txtDenImaginario.setText("" + aux1);
+                    } else if (ni > 0 && di > 0) {
+                        jLabelSignoImg.setText("+");
+                    } else if (ni < 0 && di > 0) {
+                        aux = ni * (-1);
+                        txtNumImaginario.setText("" + aux);
+                        jLabelSignoImg.setText("-");
+                    } else if (ni > 0 && di < 0) {
+                        aux1 = di * (-1);
+                        txtNumImaginario.setText("" + aux1);
+                        jLabelSignoImg.setText("-");
+                    }
+
+                } else {
+                    txtReal3.setText("" + c3.getReal());
+                    txtImaginario3.setText("" + c3.getImaginario());
+                    i3 = Integer.parseInt(txtImaginario3.getText());
+                    if (i3 < 0) {
+                        aux = i3 * (-1);
+                        jLabel8.setText("-");
+                        txtImaginario3.setText("" + aux);
+                    } else {
+                        jLabel8.setText("+");
+                    }
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Ingrese un número válido", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
 
@@ -310,54 +385,54 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
     private void txtReal1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReal1KeyTyped
-        char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
-          }
-    if(evt.getKeyChar()=='-'&&txtReal1.getText().contains("-")){
-        evt.consume();
-    } 
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c) && evt.getKeyChar() != '-') {
+            getToolkit().beep();
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '-' && txtReal1.getText().contains("-")) {
+            evt.consume();
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_txtReal1KeyTyped
 
     private void txtImaginario1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtImaginario1KeyTyped
-       char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
-          }
-    if(evt.getKeyChar()=='-'&&txtImaginario1.getText().contains("-")){
-        evt.consume();
-    } 
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c) && evt.getKeyChar() != '-') {
+            getToolkit().beep();
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '-' && txtImaginario1.getText().contains("-")) {
+            evt.consume();
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_txtImaginario1KeyTyped
 
     private void txtReal2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReal2KeyTyped
-        char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
-          }
-    if(evt.getKeyChar()=='-'&&txtReal2.getText().contains("-")){
-        evt.consume();
-    } 
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c) && evt.getKeyChar() != '-') {
+            getToolkit().beep();
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '-' && txtReal2.getText().contains("-")) {
+            evt.consume();
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_txtReal2KeyTyped
 
     private void txtImaginario2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtImaginario2KeyTyped
-       char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
-          }
-    if(evt.getKeyChar()=='-'&&txtImaginario2.getText().contains("-")){
-        evt.consume();
-    } 
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c) && evt.getKeyChar() != '-') {
+            getToolkit().beep();
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '-' && txtImaginario2.getText().contains("-")) {
+            evt.consume();
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_txtImaginario2KeyTyped
 
@@ -403,8 +478,10 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -413,6 +490,8 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelSignoImg;
+    private javax.swing.JLabel jLabelSignoReal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
